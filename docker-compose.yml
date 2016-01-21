@@ -1,0 +1,17 @@
+rails:
+  build: .
+  command: /app/start.sh
+  ports:
+   - "3000:3000"
+  links:
+   - mysql
+   - mysql:mysql.cloud66.local
+  environment:
+   - RAILS_ENV=development
+   - MYSQL_USERNAME=root
+   - MYSQL_ADDRESS=mysql
+   - MYSQL_DATABASE=rails-mysql
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ALLOW_EMPTY_PASSWORD=true
