@@ -2,6 +2,7 @@
 FROM ruby:2.1
 
 RUN apt-get update -qq && apt-get install -y build-essential nodejs
+RUN bundle config build.nokogiri --use-system-libraries
 
 #set working dir
 WORKDIR /tmp
