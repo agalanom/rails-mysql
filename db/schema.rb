@@ -13,8 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20130426142944) do
 
-  create_table "balls", force: true do |t|
-    t.integer  "dimples"
+  create_table "balls", force: :cascade do |t|
+    t.integer  "dimples",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
