@@ -12,7 +12,7 @@ The following settings may be changed on a new branch. See below for naming and 
 
 | Branch           | master        |
 | ---------------- |:-------------:|
-| Rails            | 4.0.0         |
+| Rails            | 4.2.5         |
 | Rack server      | Passenger     |
 | Manifest file    | Chrony, atop  |
 | Deployment hooks | -             |
@@ -21,5 +21,3 @@ The following settings may be changed on a new branch. See below for naming and 
 If you would like to modify the contents of this repository, please create a new branch. When doing so, please remember to:
 * Follow conventions when naming the branch (ie. if you want to use the Puma rack server, please name the branch _Puma_)
 * Add a section to this document in the above format stating your changes
-
-
