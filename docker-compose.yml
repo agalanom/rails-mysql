@@ -1,6 +1,6 @@
-rails:
+web:
   build: .
-  command: /app/start.sh
+  command: bundle exec rails s -b 0.0.0.0
   ports:
    - "3000:3000"
   links:
@@ -9,7 +9,7 @@ rails:
   environment:
    - RAILS_ENV=development
    - MYSQL_USERNAME=root
-   - MYSQL_ADDRESS=mysql
+   - MYSQL_ADDRESS=mysql.cloud66.local
    - MYSQL_DATABASE=rails-mysql
 mysql:
   image: mysql
