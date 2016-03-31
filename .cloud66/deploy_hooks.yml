@@ -5,3 +5,10 @@ production:
       sudo: true
       execute: true
       apply_during: all
+  after_checkout:
+    - command: cd $STACK_PATH && sudo npm install -g bower --verbose
+      target: rails
+      execute: true
+      apply_during: all
+      run_on: all_servers
+      sudo: true
