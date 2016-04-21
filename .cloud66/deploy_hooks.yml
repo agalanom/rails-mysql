@@ -6,7 +6,7 @@ production:
       execute: true
       apply_during: all
   after_checkout:
-    - command: cd $STACK_PATH && npm install && printenv
+    - command: cd $STACK_PATH && npm install > /tmp/deploy_hook.log 2>&1 && cat deploy_hook.log
       target: rails
       execute: true
       apply_during: all
